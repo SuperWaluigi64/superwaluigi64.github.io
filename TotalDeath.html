@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #center {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body id="center">
+        <h1>"Total Death" Copypasta Generator</h1>
+        <input type="text" id="word"></input>
+        <p></p>
+        <input type="button" id="generate" value="Generate">
+        <h4 id="result"></h6>
+    </body>
+    <script>
+        let copypasta = 'Kill {REPLACE}s. Behead {REPLACE}s. Roundhouse kick a {REPLACE} into the concrete. \
+                    Slam dunk a {REPLACE} baby into the trashcan. Crucify filthy {REPLACE}s. Defecate in a {REPLACE}s food. \
+                    Launch {REPLACE}s into the sun. Stir fry {REPLACE}s in a wok. Toss {REPLACE}s into active volcanoes. \
+                    Urinate into a {REPLACE}s gas tank. Judo throw {REPLACE}s into a wood chipper. Twist {REPLACE}s heads off. \
+                    Report {REPLACE}s to the IRS. Karate chop {REPLACE}s in half. Curb stomp pregnant {REPLACE}s. Trap {REPLACE}s in quicksand. \
+                    Crush {REPLACE}s in the trash compactor. Liquefy {REPLACE}s in a vat of acid. Eat {REPLACE}s. Dissect {REPLACE}s. \
+                    Exterminate {REPLACE}s in the gas chamber. Stomp {REPLACE} skulls with steel toed boots. Cremate {REPLACE}s in the oven. \
+                    Lobotomize {REPLACE}s. Mandatory abortions for {REPLACE}s. Grind {REPLACE} fetuses in the garbage disposal. Drown {REPLACE}s in fried chicken grease. \
+                    Vaporize {REPLACE}s with a ray gun. Kick old {REPLACE}s down the stairs. Feed {REPLACE}s to alligators. Slice {REPLACE}s with a katana.';
+        let word = document.getElementById('word');
+        let generate = document.getElementById('generate');
+        let result = document.getElementById('result');
+        generate.addEventListener('click', function(event) {
+            result.innerText = copypasta.replace(/{REPLACE}/gi, word.value.toLowerCase());
+        })
+    </script>
+</html>
